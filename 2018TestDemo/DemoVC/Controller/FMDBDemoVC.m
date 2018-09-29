@@ -134,8 +134,6 @@
     } else {
         NSLog(@"插入失败");
     }
-    
-    
 }
 
 //删除数据
@@ -176,7 +174,6 @@
         NSString *phone = [resultSet stringForColumn:@"phone"];
         NSLog(@"%d == %@ == %d == %@", ID, name, score,phone);
     }
-    
 }
 
 - (void)update
@@ -208,10 +205,6 @@
     NSLog(@"不存在");
     return NO;
 }
-
-
-
-
 
 
 //判断文件是否已经在沙盒中已经存在？
