@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  2018TestDemo
+//
+//  Created by zp on 2018/4/25.
+//  Copyright © 2018年 zp. All rights reserved.
+//
+
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// __OBJC__这个宏,宏内引用的文件确保只被使用Objective-C语言的文件所引用，限定仅仅被OC代码使用
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#import "UIImage+Category.h"
+#import "Configure.h"
+#import "UrlConfig.h"
+#import "ZFJPermissionManager.h"
+#import "NSArray+Category.h"
+#import "UINavigationBar+CustomBar.h"
+#import "UIButton+NsTimer.h"
+/**
+ *  配置自定义的测试Log
+ */
+
+
+#endif /* PrefixHeader_pch */
