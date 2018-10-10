@@ -26,6 +26,7 @@
 #import "FMDBDemoVC.h"
 #import "WkHeightVC.h"
 
+
 #import "FullScreenVC.h"
 #import "UIView+Toast.h"
 
@@ -127,10 +128,6 @@
     
     self.view.backgroundColor = randomColor;
     
-    
-    
-    
-    
     [self test];
     
     //[AlertTool ShowAlertTitle:@"提示" msg:@"是否确定操作？" InVC:self];
@@ -142,8 +139,6 @@
     
     
     [self loadUIWithData];
-    
-    
     
     
     UIImageView *headview=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, FrameW, 200)];
@@ -248,8 +243,6 @@
     } failedBlock:^(NSError *error) {
         NSLog(@"fail");
     }];
-    
-    
 }
 
 

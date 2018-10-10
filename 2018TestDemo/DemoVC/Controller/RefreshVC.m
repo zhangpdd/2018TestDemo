@@ -8,11 +8,14 @@
 
 #import "RefreshVC.h"
 #import "KeyBoardVC.h"
+
+#define headHeight 200
+#define headSectionHeight 40
+
 @interface RefreshVC ()<UITableViewDelegate, UITableViewDataSource>
 {
-    UIScrollView *mainScrollView;
-    
     UIView *headView;
+    UIView *headSectionView;
 }
 @property (strong , nonatomic) UITableView *PowerStationListTable;
 
@@ -39,11 +42,12 @@
         //分割线消失
         //_PowerStationListTable.separatorStyle = UITableViewCellEditingStyleNone;
         
+        _PowerStationListTable.contentInset = UIEdgeInsetsMake(headHeight+headSectionHeight, 0, 0, 0);
+        _PowerStationListTable.contentOffset = CGPointMake(0, -headHeight-headSectionHeight);
+        
         // 默认的下拉刷新和上拉加载
         //设置回调（一旦进入刷新状态，然后调用目标的动作，即调用[self loadNewData]）
         _PowerStationListTable.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self  refreshingAction:@selector(loadPowerStationData)];
-        
-        
         
     }
     return _PowerStationListTable;
@@ -72,22 +76,33 @@
     self.view.backgroundColor=[UIColor yellowColor];
     
     
+    [self.view addSubview:self.PowerStationListTable];
+    [self.PowerStationListTable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.offset(NavTopHeight);
+        make.bottom.offset(0);
+        make.left.offset(0);
+        make.right.offset(0);
+    }];
+    
+    
     
     headView=[[UIView alloc] init];
     headView.backgroundColor=[UIColor cyanColor];
     [self.view addSubview:headView];
     [headView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(0);
+        make.top.offset(NavTopHeight);
         make.left.right.offset(0);
-        make.height.mas_equalTo(200);
+        make.height.mas_equalTo(headHeight);
     }];
     
-    [self.view addSubview:self.PowerStationListTable];
-    [self.PowerStationListTable mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    headSectionView=[[UIView alloc] init];
+    headSectionView.backgroundColor=[UIColor redColor];
+    [self.view addSubview:headSectionView];
+    [headSectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self->headView.mas_bottom).offset(0);
-        make.bottom.offset(0);
-        make.left.offset(0);
-        make.right.offset(0);
+        make.left.right.offset(0);
+        make.height.mas_equalTo(headSectionHeight);
     }];
     
 //    UIView *redImage=[[UIView alloc] initWithFrame:CGRectMake(0, -200, FrameW, 200)];
@@ -101,25 +116,27 @@
 {
     CGFloat offsetY = scrollView.contentOffset.y;
     
+    offsetY += headHeight+headSectionHeight;//减去内边距
     
-    if (offsetY >= 200)
-    {
-       
-        [headView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.offset(-200);
-        }];
-    }else if (offsetY > 0 && offsetY <200)
+    if (offsetY >= headHeight)
     {
         //偏移量
-//        self.PowerStationListTable.contentInset = UIEdgeInsetsMake(-offsetY, 0, 0, 0);
+        self.PowerStationListTable.contentInset = UIEdgeInsetsMake(headSectionHeight, 0, 0, 0);
         [headView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.offset(-offsetY);
+            make.top.offset(NavTopHeight-headHeight);
         }];
-        
+    }else if (offsetY > 0 && offsetY <headHeight)
+    {
+        //偏移量
+        self.PowerStationListTable.contentInset = UIEdgeInsetsMake(headHeight+headSectionHeight, 0, 0, 0);
+        [headView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.offset(NavTopHeight-offsetY);
+        }];
+
     }else
     {
         [headView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.offset(0);
+            make.top.offset(NavTopHeight);
         }];
     }
     
