@@ -84,7 +84,7 @@
     [childVC.tabBarItem setTitleTextAttributes:selectedTextAtts forState:UIControlStateSelected];
     
     //先给外面传进来的小控制器 包装 一个导航控制器
-    ZPNavgationVC *nav = [[ZPNavgationVC alloc]initWithRootViewController:childVC];
+    ZPNavgationVC *nav = [[ZPNavgationVC alloc] initWithRootViewController:childVC];
     
     //添加为子控制器
     [self addChildViewController:nav];

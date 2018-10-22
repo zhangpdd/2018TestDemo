@@ -86,6 +86,10 @@
 		F85B799620F4410F008564C6 /* ZFJPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F85B799520F4410F008564C6 /* ZFJPermissionManager.m */; };
 		F85DFB1020AC153000668C60 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = F85DFB0E20AC152F00668C60 /* UIView+Toast.m */; };
 		F860A42020EF34DD0023E7AD /* 动图.gif in Resources */ = {isa = PBXBuildFile; fileRef = F860A41F20EF34DD0023E7AD /* 动图.gif */; };
+		F861276821748363006D0F18 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F861276721748363006D0F18 /* RootVC.m */; };
+		F861276B21748371006D0F18 /* centerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F861276A21748371006D0F18 /* centerVC.m */; };
+		F861276E2174837C006D0F18 /* leftVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F861276D2174837C006D0F18 /* leftVC.m */; };
+		F861277121748389006D0F18 /* rightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F861277021748389006D0F18 /* rightVC.m */; };
 		F8624A8520CA18C3007BF424 /* dyTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F8624A8420CA18C3007BF424 /* dyTestVC.m */; };
 		F8624A8820CA1966007BF424 /* dyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8624A8720CA1966007BF424 /* dyModel.m */; };
 		F8624A8B20CA1975007BF424 /* dyFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8624A8A20CA1975007BF424 /* dyFrameModel.m */; };
@@ -325,6 +329,14 @@
 		F85DFB0E20AC152F00668C60 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		F85DFB0F20AC153000668C60 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		F860A41F20EF34DD0023E7AD /* 动图.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "动图.gif"; sourceTree = "<group>"; };
+		F861276621748363006D0F18 /* RootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootVC.h; sourceTree = "<group>"; };
+		F861276721748363006D0F18 /* RootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
+		F861276921748371006D0F18 /* centerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centerVC.h; sourceTree = "<group>"; };
+		F861276A21748371006D0F18 /* centerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centerVC.m; sourceTree = "<group>"; };
+		F861276C2174837C006D0F18 /* leftVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leftVC.h; sourceTree = "<group>"; };
+		F861276D2174837C006D0F18 /* leftVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = leftVC.m; sourceTree = "<group>"; };
+		F861276F21748389006D0F18 /* rightVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rightVC.h; sourceTree = "<group>"; };
+		F861277021748389006D0F18 /* rightVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rightVC.m; sourceTree = "<group>"; };
 		F8624A8320CA18C3007BF424 /* dyTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dyTestVC.h; sourceTree = "<group>"; };
 		F8624A8420CA18C3007BF424 /* dyTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dyTestVC.m; sourceTree = "<group>"; };
 		F8624A8620CA1966007BF424 /* dyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dyModel.h; sourceTree = "<group>"; };
@@ -786,6 +798,7 @@
 		F850307420AD299400A0F335 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F861276521748341006D0F18 /* 抽屉效果 */,
 				F84C5F8820B3E1EA00788E32 /* index.html */,
 				F850306F20AD295700A0F335 /* BackAnimateVC.h */,
 				F850307020AD295700A0F335 /* BackAnimateVC.m */,
@@ -949,6 +962,21 @@
 				F85B799520F4410F008564C6 /* ZFJPermissionManager.m */,
 			);
 			path = AuthorityTool;
+			sourceTree = "<group>";
+		};
+		F861276521748341006D0F18 /* 抽屉效果 */ = {
+			isa = PBXGroup;
+			children = (
+				F861276621748363006D0F18 /* RootVC.h */,
+				F861276721748363006D0F18 /* RootVC.m */,
+				F861276921748371006D0F18 /* centerVC.h */,
+				F861276A21748371006D0F18 /* centerVC.m */,
+				F861276C2174837C006D0F18 /* leftVC.h */,
+				F861276D2174837C006D0F18 /* leftVC.m */,
+				F861276F21748389006D0F18 /* rightVC.h */,
+				F861277021748389006D0F18 /* rightVC.m */,
+			);
+			path = "抽屉效果";
 			sourceTree = "<group>";
 		};
 		F8624A8220CA1897007BF424 /* 朋友圈 */ = {
@@ -1570,12 +1598,14 @@
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/PYSearch/PYSearch/PYSearch.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PYSearch.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1618,6 +1648,7 @@
 				F882588920BF9A5100056710 /* SearchTableViewController.m in Sources */,
 				F850307720AD34A700A0F335 /* PushItemModel.m in Sources */,
 				F8624A8820CA1966007BF424 /* dyModel.m in Sources */,
+				F861277121748389006D0F18 /* rightVC.m in Sources */,
 				F8BF4CB720904569003323F7 /* NSDictionary+Category.m in Sources */,
 				F84D38A7209ACFD400BC62B8 /* ZPAccount.m in Sources */,
 				F8624A8B20CA1975007BF424 /* dyFrameModel.m in Sources */,
@@ -1653,6 +1684,7 @@
 				F8BF4CC320904569003323F7 /* UIColor+BGHexColor.m in Sources */,
 				F8624A9120CA1A27007BF424 /* nineView.m in Sources */,
 				F8BF4CBB20904569003323F7 /* NSString+Category.m in Sources */,
+				F861276821748363006D0F18 /* RootVC.m in Sources */,
 				F8BF4CCA20904569003323F7 /* UITableViewCell+CellAnimation.m in Sources */,
 				F8BF4CD020904569003323F7 /* UIViewController+Example.m in Sources */,
 				F850307A20AD4AC600A0F335 /* AlertAnimateVC.m in Sources */,
@@ -1708,7 +1740,9 @@
 				F87B7B73214B86C6008A49F9 /* FMDBDemoVC.m in Sources */,
 				F882588420BF9A2300056710 /* PeopleTableViewCell.m in Sources */,
 				F84C5F9620B3F05300788E32 /* SDPhotoBrowser.m in Sources */,
+				F861276E2174837C006D0F18 /* leftVC.m in Sources */,
 				F858F42820BE4F3D007395FB /* BaseView.m in Sources */,
+				F861276B21748371006D0F18 /* centerVC.m in Sources */,
 				F850856D20B5511500867B4C /* DynamicModel.m in Sources */,
 				F838D4F520FDC6BE002D14E5 /* UINavigationBar+CustomBar.m in Sources */,
 				F847B1C820AEC08F00E6A589 /* SeerchNavVC.m in Sources */,
@@ -1870,8 +1904,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B44F5UL6C7;
+				DEVELOPMENT_TEAM = 7H7GGP56GD;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/2018TestDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = 2018TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1881,6 +1916,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zp.-018TestDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1891,8 +1927,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B44F5UL6C7;
+				DEVELOPMENT_TEAM = 7H7GGP56GD;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/2018TestDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = 2018TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1902,6 +1939,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "zp.-018TestDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

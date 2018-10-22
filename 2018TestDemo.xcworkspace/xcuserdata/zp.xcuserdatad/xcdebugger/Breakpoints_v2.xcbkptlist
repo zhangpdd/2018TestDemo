@@ -42,7 +42,7 @@
                   moduleName = "2018TestDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zp/Desktop/2018TestDemo/2018TestDemo/Message/MessageVC.m"
-                  timestampString = "560854505.41328"
+                  timestampString = "561370388.199958"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -57,7 +57,7 @@
                   moduleName = "2018TestDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zp/Desktop/2018TestDemo/2018TestDemo/Message/MessageVC.m"
-                  timestampString = "560854505.415539"
+                  timestampString = "561370388.202149"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -80,118 +80,6 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "-clearSystemGestureEffect"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "2018TestDemo/Dynamic/DynamicsVC.m"
-            timestampString = "559644036.643311"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__25-[DynamicsVC viewDidLoad]_block_invoke"
-                  moduleName = "2018TestDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zp/Desktop/2018TestDemo/2018TestDemo/Dynamic/DynamicsVC.m"
-                  timestampString = "560854505.425772"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__25-[DynamicsVC viewDidLoad]_block_invoke_2"
-                  moduleName = "2018TestDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zp/Desktop/2018TestDemo/2018TestDemo/Dynamic/DynamicsVC.m"
-                  timestampString = "560854505.4279341"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "2018TestDemo/Dynamic/DynamicsVC.m"
-            timestampString = "559644066.850607"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__25-[DynamicsVC viewDidLoad]_block_invoke_2"
-                  moduleName = "2018TestDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zp/Desktop/2018TestDemo/2018TestDemo/Dynamic/DynamicsVC.m"
-                  timestampString = "560854505.433543"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__25-[DynamicsVC viewDidLoad]_block_invoke_3"
-                  moduleName = "2018TestDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zp/Desktop/2018TestDemo/2018TestDemo/Dynamic/DynamicsVC.m"
-                  timestampString = "560854505.435753"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "2018TestDemo/Dynamic/DynamicsVC.m"
-            timestampString = "559644067.6584409"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

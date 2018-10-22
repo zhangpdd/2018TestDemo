@@ -25,6 +25,7 @@
 #import "DoubleTableVC.h"
 #import "FMDBDemoVC.h"
 #import "WkHeightVC.h"
+#import "RootVC.h"
 
 
 #import "FullScreenVC.h"
@@ -192,6 +193,13 @@
 
 - (void)test
 {
+    
+    int arrName[4] = {10,20,30,40};
+    
+    int *p = (int *)(&arrName + 1);
+    
+    NSLog(@"%d",*(p-1));
+    
     NSMutableArray *arr=[NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8", nil];
     
     NSMutableArray *arr1=[NSMutableArray arrayWithObjects:@"3",@"4",@"5",@"6",@"7",@"8", nil];
@@ -248,7 +256,7 @@
 
 -(void)loadUIWithData
 {
-    self.demoArr = [NSMutableArray arrayWithObjects:@"背景动画", @"弹出框动画", @"table异常状态", @"搜索框动画", @"商品详情", @"朋友圈",@"个人信息的存储和删除",@"OC-js交互",@"好友列表", @"下拉刷新在中间",@"键盘高度",@"筛选",@"列表联动",@"数据库",@"网页高度",@"全屏", nil];
+    self.demoArr = [NSMutableArray arrayWithObjects:@"背景动画", @"弹出框动画", @"table异常状态", @"搜索框动画", @"商品详情", @"朋友圈",@"个人信息的存储和删除",@"OC-js交互",@"好友列表", @"下拉刷新在中间",@"键盘高度",@"筛选",@"列表联动",@"数据库",@"网页高度",@"抽屉效果",@"全屏", nil];
     
     PushItemModel *model=[[PushItemModel alloc] init];
     model.destVc = [BackAnimateVC class];
@@ -296,10 +304,13 @@
     PushItemModel *model14=[[PushItemModel alloc] init];
     model14.destVc = [WkHeightVC class];
     
-    [self.sections addObjectsFromArray:[NSArray arrayWithObjects:model,model1,model2, model3,model4,model5,model6,model7,model8,model9,model10,model11,model12,model13,model14,nil]];
+    PushItemModel *model15=[[PushItemModel alloc] init];
+    model15.destVc = [RootVC class];
+    
+    [self.sections addObjectsFromArray:[NSArray arrayWithObjects:model,model1,model2, model3,model4,model5,model6,model7,model8,model9,model10,model11,model12,model13,model14,model15,nil]];
     
     
-    [self.VCArr addObjectsFromArray:[NSArray arrayWithObjects:@[[BackAnimateVC class],[AlertAnimateVC class],[ListTypeVC class],[SeerchNavVC class],[ShopDetailsVC class],[DynamicVC class],[UserInfoVC class],[OC_JSVC class],[FriendListVC class],[RefreshVC class],[KeyBoardVC class],[ChooseVC class],[DoubleTableVC class],[FMDBDemoVC class],[WkHeightVC class],[FullScreenVC class]], nil]];
+    [self.VCArr addObjectsFromArray:[NSArray arrayWithObjects:@[[BackAnimateVC class],[AlertAnimateVC class],[ListTypeVC class],[SeerchNavVC class],[ShopDetailsVC class],[DynamicVC class],[UserInfoVC class],[OC_JSVC class],[FriendListVC class],[RefreshVC class],[KeyBoardVC class],[ChooseVC class],[DoubleTableVC class],[FMDBDemoVC class],[WkHeightVC class],[RootVC class],[FullScreenVC class]], nil]];
     
     [self.demoList reloadData];
     

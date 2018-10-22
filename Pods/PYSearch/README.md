@@ -1,8 +1,13 @@
-# PYSearch
 
-[![Build Status](https://travis-ci.org/iphone5solo/PYSearch.svg?branch=master)](https://travis-ci.org/iphone5solo/PYSearch)
+<img src="https://github.com/iphone5solo/learngit/raw/master/imagesForPYSearch/logo.png" height="200">
+
+<br/><br/>
+[![Apps Using](https://img.shields.io/badge/Apps%20Using-%3E%203,000-00BFFF.svg?style=plastic)](https://cocoapods.org/pods/PYSearch)
+[![Total Downloads](https://img.shields.io/badge/Total%20Downloads-%3E%2060,000-00BFFF.svg?style=plastic)](https://cocoapods.org/pods/PYSearch)
+<br>
+[![Build Status](https://travis-ci.org/ko1o/PYSearch.svg?branch=master)](https://travis-ci.org/ko1o/PYSearch)
 [![Pod Version](http://img.shields.io/cocoapods/v/PYSearch.svg?style=flat)](http://cocoadocs.org/docsets/PYSearch/)
-[![Pod Platform](http://img.shields.io/cocoapods/p/PYSearch.svg?style=flat)](http://cocoadocs.org/docsets/PYSearch/)
+[![Pod Platform](https://img.shields.io/badge/platform-iOS%207%2B-blue.svg?style=flat)](http://cocoadocs.org/docsets/PYSearch/)
 [![Pod License](http://img.shields.io/cocoapods/l/PYSearch.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 - 🔍 An elegant search controller for iOS.
@@ -14,6 +19,7 @@
 - [x] Support a variety of hot search style
 - [x] Support a variety of search history style
 - [x] Support a variety of search results display mode
+- [x] Support a variety of search view controller display mode
 - [x] Support search suggestions
 - [x] Support search history (record) cache
 - [x] Support callback using delegate or block completion search
@@ -110,4 +116,43 @@ searchViewController.searchResultController = [[UIViewController alloc] init];
 searchViewController.hotSearchStyle = PYHotSearchStyleColorfulTag;
 ```
 
-* Set searchHistoryStyle（default is PYS
+* Set searchHistoryStyle（default is PYSearchHistoryStyleCell）
+```objc
+// Set searchHistoryStyle
+searchViewController.searchHistoryStyle = PYSearchHistoryStyleBorderTag;
+```
+
+* Set searchHistoriesCachePath（default is PYSEARCH_SEARCH_HISTORY_CACHE_PATH）
+```objc
+// Set searchHistoriesCachePath
+searchViewController.searchHistoriesCachePath = @"The cache path";
+```
+
+* Set searchHistoriesCount（default is 20）
+```objc
+// Set searchHistoriesCount
+searchViewController. searchHistoriesCount = 6;
+```
+
+* Set searchResultShowMode（default is PYSearchResultShowModeCustom）
+```objc
+// Set searchResultShowMode
+searchViewController.searchResultShowMode = PYSearchResultShowModeEmbed;
+```
+
+* Set searchSuggestionHidden（deafult is NO）
+```objc
+// Set searchSuggestionHidden
+searchViewController.searchSuggestionHidden = YES;
+```
+
+## <a id="Hope"></a>Hope
+
+- If you have any questions during the process or want more interfaces to customize，you can [issues me](https://github.com/iphone5solo/PYSearch/issues/new)! 
+- Instead of giving me star, it is better to throw a bug to me!
+- If you want to participate in the maintenance of this project or have a good design style, welcome to pull request!
+- If you feel slightly discomfort in use, please contact me QQ:499491531 or Email:499491531@qq.com.
+- Hope to improve this project together, let it become more powerful, able to meet the needs of most users!
+
+## Licenses
+All source code is licensed under the MIT License.

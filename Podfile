@@ -15,6 +15,7 @@ pod 'PYSearch'
 
 pod 'FMDB’
 
+pod 'TZImagePickerController’
 
 
 end
