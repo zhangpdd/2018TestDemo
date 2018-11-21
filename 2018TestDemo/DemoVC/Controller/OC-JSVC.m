@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view
+    
     self.webView=[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, FrameW, 240)];
     self.webView.delegate = self;
     [self.view addSubview:self.webView];

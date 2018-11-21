@@ -362,6 +362,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"demoCell" forIndexPath:indexPath];
     
     cell.textLabel.text=[NSString stringWithFormat:@"%@",_demoArr[indexPath.section]];
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
@@ -377,7 +378,7 @@
         //[self.navigationController pushViewController:vc animated:YES];
         [self presentViewController:vc animated:NO completion:nil];
         
-    }else
+    }else 
     {
         PushItemModel *pushItem = (PushItemModel *)self.sections[indexPath.section];
         if(pushItem.destVc)

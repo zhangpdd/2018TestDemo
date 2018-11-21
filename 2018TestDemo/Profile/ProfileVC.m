@@ -53,6 +53,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.5];
     //显示
     //[self.tabBarController.tabBar showBadgeOnItemIndex:4];
     //隐藏

@@ -26,16 +26,16 @@
     
     [self POST:GetTopics_URL parameters:params progress:nil success:^(id responseObject) {
         
-        if (succeededBlock)
-        {
-            //字典转模型，处理之后传回数据
-            succeededBlock(responseObject);
-        }
+        
+            if (responseObject && [responseObject isKindOfClass:[NSDictionary class]])
+            {
+                //字典转模型，处理之后传回数据
+                !succeededBlock ? : succeededBlock(responseObject);
+            }
+        
     } failure:^(NSError *error) {
-        if (failedBlock)
-        {
-            failedBlock(error);
-        }
+        
+        !failedBlock ? : failedBlock(error);
     }];
     
     
