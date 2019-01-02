@@ -56,9 +56,9 @@ typedef NS_ENUM(NSInteger, SSMarginType) {
 /**
  *  按钮只设置了title or image，该方法可以改变它们的位置
  *
- *  @param edgeInsetsType <#edgeInsetsType description#>
- *  @param marginType     <#marginType description#>
- *  @param margin         <#margin description#>
+ *  @param edgeInsetsType 标题还是图片
+ *  @param marginType     位置类型
+ *  @param margin         偏移量
  */
 - (void)setEdgeInsetsWithType:(SSEdgeInsetsType)edgeInsetsType marginType:(SSMarginType)marginType margin:(CGFloat)margin;
 

@@ -26,6 +26,30 @@
     } failure:^(NSError *error) {
         
     }];
+    
+    
+    
+    //http://pt.qiandeng.gov.cn/river/webService/WebService_river.asmx/hdxys
+    //[dic setValue:@"" forKey:@"hdbh"];
+    
+    NSMutableDictionary *dic =[NSMutableDictionary dictionary];
+    [dic setValue:@"" forKey:@"hdbh"];
+    [HttpRequestTool POST:@"http://pt.qiandeng.gov.cn/river/webService/WebService_river.asmx/hdxys" parameters:dic progress:^(NSProgress *progress) {
+        
+    } success:^(id responseObject) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+    [HttpRequestTool POST:@"http://pt.qiandeng.gov.cn/webService/hqappService.asmx/checkNewVer_ios" parameters:nil progress:^(NSProgress *progress) {
+        
+    } success:^(id responseObject) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
     // Do any additional setup after loading the view.
 }
 

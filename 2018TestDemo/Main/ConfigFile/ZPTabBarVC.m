@@ -52,12 +52,12 @@
     //[self.tabBarController.tabBar hideBadgeOnItemIndex:2];
     [self addChildVC:profile title:@"我的" norImage:@"icon_wd" selImage:@"icon_wd_click"];
     
-    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];//背景颜色
+   [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];//背景颜色
     [[UITabBar appearance] setTranslucent:NO];//半透明属性 vc底部在tabbar上面
     
-//    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
-//    [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
-//    [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
+    [[UITabBar appearance] setBackgroundImage:[UIImage new]];
+    [[UITabBar appearance] setBackgroundColor:[UIColor redColor]];
+//    [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];//tabbar上方的分割线
 }
 
 // 添加子控制器

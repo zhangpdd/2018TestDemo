@@ -7,7 +7,7 @@
 //
 
 #import "MessageVC.h"
-
+#import <sys/utsname.h>
 @interface MessageVC ()<UIGestureRecognizerDelegate>
 
 @end
@@ -19,6 +19,7 @@
     
     self.view.backgroundColor=UIColorFromRGB(0x1f93ff);
     
+    [self getDeviceName];
     
     UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
     tapGr.delegate = self;
@@ -56,7 +57,7 @@
 //解决tableView的点击事件与手势冲突
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    NSString *str= [NSString stringWithFormat:@"%@",NSStringFromClass([touch.view class])] ;
+    //NSString *str= [NSString stringWithFormat:@"%@",NSStringFromClass([touch.view class])] ;
     if([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"])
     {
         return NO;
@@ -69,14 +70,54 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// 获取设备型号然后手动转化为对应名称
+- (NSString *)getDeviceName
+{
+    //需要#import <sys/utsname.h>
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    
+    if ([platform isEqualToString:@"iPhone3,1"] || [platform isEqualToString:@"iPhone3,2"] || [platform isEqualToString:@"iPhone3,3"])
+        return @"iPhone 4";
+    if ([platform isEqualToString:@"iPhone4,1"])
+        return @"iPhone 4S";
+    if ([platform isEqualToString:@"iPhone5,1"] || [platform isEqualToString:@"iPhone5,2"])
+        return @"iPhone 5";
+    if ([platform isEqualToString:@"iPhone5,3"] || [platform isEqualToString:@"iPhone5,4"])
+        return @"iPhone 5c";
+    if ([platform isEqualToString:@"iPhone6,1"] || [platform isEqualToString:@"iPhone6,2"])
+        return @"iPhone 5s";
+    if ([platform isEqualToString:@"iPhone7,1"])
+        return @"iPhone 6 Plus";
+    if ([platform isEqualToString:@"iPhone7,2"])
+        return @"iPhone 6";
+    if ([platform isEqualToString:@"iPhone8,1"])
+        return @"iPhone 6s";
+    if ([platform isEqualToString:@"iPhone8,2"])
+        return @"iPhone 6s Plus";
+    if ([platform isEqualToString:@"iPhone8,4"])
+        return @"iPhone SE";
+    if ([platform isEqualToString:@"iPhone9,1"])
+        return @"iPhone 7";
+    if ([platform isEqualToString:@"iPhone9,2"])
+        return @"iPhone 7 Plus";
+    if ([platform isEqualToString:@"iPhone10,1"] || [platform isEqualToString:@"iPhone10,4"])
+        return @"iPhone 8";
+    if ([platform isEqualToString:@"iPhone10,2"] || [platform isEqualToString:@"iPhone10,5"])
+        return @"iPhone 8 Plus";
+    if ([platform isEqualToString:@"iPhone10,3"] || [platform isEqualToString:@"iPhone10,6"])
+        return @"iPhone X";
+    if ([platform isEqualToString:@"11,2"])
+        return @"iPhone XS";
+    if ([platform isEqualToString:@"iPhone11,4"] || [platform isEqualToString:@"iPhone11,6"])
+        return @"iPhone XS Max";
+    if ([platform isEqualToString:@"iPhone11,8"])
+        return @"iPhone XR";
+    if ([platform isEqualToString:@"x86_64"] || [platform isEqualToString:@"i386"])
+        return @"iPhone Simulator";
+    
+    return @"其他设备";
 }
-*/
 
 @end

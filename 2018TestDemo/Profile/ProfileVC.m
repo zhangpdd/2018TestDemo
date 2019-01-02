@@ -15,7 +15,7 @@
 @property (strong , nonatomic) NSArray *profileArr;
 
 @end
-
+NSString *str=@"123";
 @implementation ProfileVC
 
 -(NSArray *)profileArr{
@@ -63,6 +63,20 @@
     self.profileArr = @[@[@"个人信息",@"账户安全"], @[@"联系客服", @"帮助中心"], @[@"关于", @"清理缓存",@"设置"], @[@"退出当前账号"]];
     
     [self.profileList reloadData];
+    
+    
+    static NSString *str=@"123";
+    
+    __block int a = 10;
+    NSLog(@"1---%p",&a);
+    NSLog(@"1---%d",a);
+    [UIView animateWithDuration:1 animations:^{
+        NSLog(@"2--->:%p",&a);
+        NSLog(@"2--->:%d",a);
+        
+    }];
+    NSLog(@"3--->%p",&a);
+    NSLog(@"3--->%d",a);
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

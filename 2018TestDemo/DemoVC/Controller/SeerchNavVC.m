@@ -215,7 +215,7 @@ UISearchControllerDelegate,UISearchResultsUpdating,UITableViewDataSource,UITable
 
 +(void)load
 {
-    NSLog(@"load");
+    NSLog(@"子类load");
 }
 
 +(void)initialize

@@ -7,9 +7,8 @@
 //
 
 #import "FullScreenVC.h"
-
+#import "demoRequest.h"
 @interface FullScreenVC ()
-
 
 @end
 
@@ -29,8 +28,8 @@
     
     //self.edgesForExtendedLayout=UIRectEdgeNone;
 
+    self.view.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:0.5];
     
-    self.view.backgroundColor=[UIColor redColor];
     //强制全屏
     [[UIDevice currentDevice]setValue:[NSNumber numberWithInteger:UIDeviceOrientationLandscapeLeft]forKey:@"orientation"];
     [[self class]attemptRotationToDeviceOrientation];
@@ -53,6 +52,12 @@
     
     [self GCDTest];
     [self gvf];
+}
+
+#pragma mark - 页面消失
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)GCDTest

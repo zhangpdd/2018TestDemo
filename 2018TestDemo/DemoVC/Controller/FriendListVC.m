@@ -147,7 +147,6 @@
     if (self.powerStationArr.count != 0)
     {
         cell.textLabel.text = self.powerStationArr[indexPath.section][indexPath.row];
-        
     }
     return cell;
 }

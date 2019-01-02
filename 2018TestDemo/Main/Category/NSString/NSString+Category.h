@@ -12,7 +12,8 @@
 #pragma mark - 格式变化
 @interface NSString (Category)
 
-
+// 网址check
+- (NSString *)getCompleteWebsite:(NSString *)urlStr;
 //电话号码中间4位****显示
 + (NSString *)getSecrectStringWithPhoneNumber:(NSString*)phoneNum;
 

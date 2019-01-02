@@ -10,6 +10,37 @@
 
 @implementation NSString (Category)
 
+#pragma mark - 网址check
+- (NSString *)getCompleteWebsite:(NSString *)urlStr{
+    NSString *returnUrlStr = nil;
+    NSString *scheme = nil;
+    
+    assert(urlStr != nil);
+    
+    urlStr = [urlStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if ( (urlStr != nil) && (urlStr.length != 0) ) {
+        NSRange  urlRange = [urlStr rangeOfString:@"://"];
+        if (urlRange.location == NSNotFound) {
+            returnUrlStr = [NSString stringWithFormat:@"https://%@", urlStr];
+        } else {
+            scheme = [urlStr substringWithRange:NSMakeRange(0, urlRange.location)];
+            assert(scheme != nil);
+            
+            if ([scheme compare:@"https" options:NSCaseInsensitiveSearch] == NSOrderedSame)
+            {
+                returnUrlStr = urlStr;
+            }else if([scheme compare:@"http"  options:NSCaseInsensitiveSearch] == NSOrderedSame)
+            {
+                returnUrlStr = [urlStr stringByReplacingCharactersInRange:NSMakeRange(0, urlRange.location) withString:@"https"];
+            }
+            else {
+                //不支持的URL方案
+            }
+        }
+    }
+    return returnUrlStr;
+}
+
 #pragma mark - 电话号码中间4位****显示
 + (NSString *)getSecrectStringWithPhoneNumber:(NSString*)phoneNum
 {

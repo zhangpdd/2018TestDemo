@@ -196,7 +196,7 @@ static AFHTTPSessionManager *_sessionManager;
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             formatter.dateFormat = @"yyyyMMddHHmmss";
             NSString *str = [formatter stringFromDate:[NSDate date]];
-            NSString *imageFileName = [NSString stringWithFormat:@"%@%ld.%@",str,i,imageType?:@"jpg"];
+            NSString *imageFileName = [NSString stringWithFormat:@"%@%lu.%@",str,(unsigned long)i,imageType?:@"jpg"];
             
             [formData appendPartWithFileData:imageData
                                         name:name
@@ -333,7 +333,7 @@ static AFHTTPSessionManager *_sessionManager;
 
 #pragma mark - 设置证书
 + (void)setSecurityPolicyWithCerPath:(NSString *)cerPath validatesDomainName:(BOOL)validatesDomainName {
-    // /先导入证书
+    // 先导入证书
     //NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"91jf" ofType:@"cer"];//证书的路径
     NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
     // 使用证书验证模式

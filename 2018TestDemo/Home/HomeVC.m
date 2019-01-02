@@ -111,7 +111,6 @@
 {
     [super viewWillAppear:YES];
     
-    
     [self.navigationController.navigationBar setNavBarBgColor:[UIColor greenColor]];
     [self.navigationController.navigationBar setNavBarAlpha:0.0];
 }
@@ -374,7 +373,7 @@
     if (indexPath.section == _demoArr.count-1)
     {
         FullScreenVC *vc=[[FullScreenVC alloc] init];
-        
+        vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
         //[self.navigationController pushViewController:vc animated:YES];
         [self presentViewController:vc animated:NO completion:nil];
         

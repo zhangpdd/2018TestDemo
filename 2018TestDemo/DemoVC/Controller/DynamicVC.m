@@ -192,17 +192,17 @@
     __weak __typeof(self) weakself = self;
     headview.tapImageBlock = ^(NSInteger index) {
         
-        [weakself.view makeToast:[NSString stringWithFormat:@"点击了图片%ld",index] duration:1.0 position:CSToastPositionCenter];
+        [weakself.view makeToast:[NSString stringWithFormat:@"点击了图片%ld",(long)index] duration:1.0 position:CSToastPositionCenter];
     };
     
     headview.praiseBlock = ^{
         
-        [weakself.view makeToast:[NSString stringWithFormat:@"点赞第%ld行",section] duration:1.0 position:CSToastPositionCenter];
+        [weakself.view makeToast:[NSString stringWithFormat:@"点赞第%ld行",(long)section] duration:1.0 position:CSToastPositionCenter];
     };
     
     headview.commentBlock = ^{
         
-        [weakself.view makeToast:[NSString stringWithFormat:@"评论第%ld行",section] duration:1.0 position:CSToastPositionCenter];
+        [weakself.view makeToast:[NSString stringWithFormat:@"评论第%ld行",(long)section] duration:1.0 position:CSToastPositionCenter];
     };
     
     return headview;
