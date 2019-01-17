@@ -7,7 +7,7 @@
 //
 
 #import "KeyBoardVC.h"
-
+#import "ChildTestVC.h"
 @interface KeyBoardVC ()<UITextFieldDelegate>
 
 @property (strong, nonatomic)UITextField *inputField;
@@ -45,6 +45,26 @@
         make.left.right.offset(0);
         make.height.mas_equalTo(50);
     }];
+    
+    //[self addchildVC];
+}
+
+
+- (void)addchildVC
+{
+    ChildTestVC * vc =[[ChildTestVC alloc] init];
+    vc.view.frame = CGRectMake(0, 100, FrameW, FrameH-100);
+    [self addChildViewController:vc];
+    [self.view addSubview:vc.view];
+    [vc didMoveToParentViewController:self];
+}
+
+- (void)hideChildVC
+{
+//    [self.goodsCtl willMoveToParentViewController:nil];
+//    [self.goodsCtl removeFromParentViewController];
+//    [self.goodsCtl.view removeFromSuperview];
+    
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
@@ -62,7 +82,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
-    
+    ChildTestVC * vc =[[ChildTestVC alloc] init];
+    [self.navigationController pushViewController:vc animated:NO];
 }
 
 -(void) keyboardWillShow:(NSNotification *)note {

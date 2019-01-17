@@ -71,6 +71,7 @@
 		F85696AC21114491005AFC52 /* ChooseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F85696AB21114491005AFC52 /* ChooseCollectionCell.m */; };
 		F85696AF21114987005AFC52 /* ChooseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F85696AE21114987005AFC52 /* ChooseModel.m */; };
 		F85696B121114B1A005AFC52 /* choose_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F85696B021114B1A005AFC52 /* choose_select@3x.png */; };
+		F857E9CD21E5846B007688E9 /* ChildTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F857E9CC21E5846B007688E9 /* ChildTestVC.m */; };
 		F858F42220BE2BA9007395FB /* testtableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F858F42120BE2BA9007395FB /* testtableVC.m */; };
 		F858F42520BE40DB007395FB /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F858F42420BE40DB007395FB /* CommentModel.m */; };
 		F858F42820BE4F3D007395FB /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F858F42720BE4F3D007395FB /* BaseView.m */; };
@@ -129,6 +130,7 @@
 		F884A014211D8C8200715459 /* 发布@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F884A012211D8C8200715459 /* 发布@2x.png */; };
 		F888BBF92092E5D300FE9D57 /* RCAnimatedImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = F888BBF82092E5D300FE9D57 /* RCAnimatedImagesView.m */; };
 		F888BBFB2092E6D400FE9D57 /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = F888BBFA2092E6D400FE9D57 /* login_background.png */; };
+		F894850521E6D5ED0037A365 /* WHGradientHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F894850421E6D5ED0037A365 /* WHGradientHelper.m */; };
 		F89509C32146066E00F723BA /* UIButton+Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = F89509C22146066E00F723BA /* UIButton+Edge.m */; };
 		F8B916B420A03A15007FCCF0 /* animateView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B916B320A03A15007FCCF0 /* animateView.m */; };
 		F8BC78842094600500ADD437 /* NoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BC78832094600500ADD437 /* NoDataView.m */; };
@@ -305,6 +307,8 @@
 		F85696AD21114987005AFC52 /* ChooseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseModel.h; sourceTree = "<group>"; };
 		F85696AE21114987005AFC52 /* ChooseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseModel.m; sourceTree = "<group>"; };
 		F85696B021114B1A005AFC52 /* choose_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choose_select@3x.png"; sourceTree = "<group>"; };
+		F857E9CB21E5846B007688E9 /* ChildTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildTestVC.h; sourceTree = "<group>"; };
+		F857E9CC21E5846B007688E9 /* ChildTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildTestVC.m; sourceTree = "<group>"; };
 		F858F42020BE2BA9007395FB /* testtableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testtableVC.h; sourceTree = "<group>"; };
 		F858F42120BE2BA9007395FB /* testtableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testtableVC.m; sourceTree = "<group>"; };
 		F858F42320BE40DB007395FB /* CommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
@@ -405,6 +409,8 @@
 		F888BBF72092E5D300FE9D57 /* RCAnimatedImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAnimatedImagesView.h; sourceTree = "<group>"; };
 		F888BBF82092E5D300FE9D57 /* RCAnimatedImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAnimatedImagesView.m; sourceTree = "<group>"; };
 		F888BBFA2092E6D400FE9D57 /* login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_background.png; sourceTree = "<group>"; };
+		F894850421E6D5ED0037A365 /* WHGradientHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHGradientHelper.m; sourceTree = "<group>"; };
+		F894850621E6D5F50037A365 /* WHGradientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHGradientHelper.h; sourceTree = "<group>"; };
 		F89509C12146066E00F723BA /* UIButton+Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Edge.h"; sourceTree = "<group>"; };
 		F89509C22146066E00F723BA /* UIButton+Edge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Edge.m"; sourceTree = "<group>"; };
 		F8B916B220A03A15007FCCF0 /* animateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = animateView.h; sourceTree = "<group>"; };
@@ -836,6 +842,8 @@
 				F87B7B72214B86C6008A49F9 /* FMDBDemoVC.m */,
 				F8765EBE2154A1D300601A3A /* WkHeightVC.h */,
 				F8765EBF2154A1D300601A3A /* WkHeightVC.m */,
+				F857E9CB21E5846B007688E9 /* ChildTestVC.h */,
+				F857E9CC21E5846B007688E9 /* ChildTestVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1375,6 +1383,8 @@
 		F8BF4CD320904A7B003323F7 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				F894850621E6D5F50037A365 /* WHGradientHelper.h */,
+				F894850421E6D5ED0037A365 /* WHGradientHelper.m */,
 				F85B799320F44109008564C6 /* AuthorityTool */,
 				F8510F1620E9B24C00E0522D /* NavigationTool */,
 				F841080E20C67BF400A3C1E7 /* AlertTool */,
@@ -1665,6 +1675,7 @@
 				F8624A8E20CA1996007BF424 /* dySectionView.m in Sources */,
 				F8BF4CD120904569003323F7 /* UIViewController+HUD.m in Sources */,
 				F877B60F214A4F82004F1403 /* ProfileVC.m in Sources */,
+				F894850521E6D5ED0037A365 /* WHGradientHelper.m in Sources */,
 				F8BF4C5520903D06003323F7 /* ZPNavgationVC.m in Sources */,
 				F8BF4CC920904569003323F7 /* UISearchBar+FMAdd.m in Sources */,
 				F8BF4CC620904569003323F7 /* UIImage+Gif.m in Sources */,
@@ -1683,6 +1694,7 @@
 				F8BF4CCB20904569003323F7 /* UITextView+Placeholder.m in Sources */,
 				F8BF4CC320904569003323F7 /* UIColor+BGHexColor.m in Sources */,
 				F8624A9120CA1A27007BF424 /* nineView.m in Sources */,
+				F857E9CD21E5846B007688E9 /* ChildTestVC.m in Sources */,
 				F8BF4CBB20904569003323F7 /* NSString+Category.m in Sources */,
 				F861276821748363006D0F18 /* RootVC.m in Sources */,
 				F8BF4CCA20904569003323F7 /* UITableViewCell+CellAnimation.m in Sources */,

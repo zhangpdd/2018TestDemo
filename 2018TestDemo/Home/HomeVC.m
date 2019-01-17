@@ -188,6 +188,21 @@
     //    _centerBtn.titleLabel.font = [UIFont systemFontOfSize:12.0];
     //    [_centerBtn setIconInTopWithSpacing:2.0];
     //    [self.view addSubview:_centerBtn];
+    
+    
+    NSArray *arr = @[@"aa",@"rr",@"pp",@"hh",@"xx",@"vv"];
+    //用系统的方法进行排序,系统缺少两个元素比较的方法.
+    //selector方法选择器.
+    
+    NSArray *sortArr = [arr sortedArrayUsingSelector:@selector(compare:)];
+    NSLog(@"%@",sortArr);
+    
+//    NSSortDescriptor *ageSD = [NSSortDescriptor sortDescriptorWithKey:@"age" ascending:YES];//ascending:YES 代表升序 如果为NO 代表降序
+//    NSSortDescriptor *scoreSD=[NSSortDescriptor sortDescriptorWithKey:@"score" ascending:YES];
+//    
+//    NSMutableArray *arrt=[NSMutableArray array];
+//    arrt = [[arr sortedArrayUsingDescriptors:@[ageSD,scoreSD]] mutableCopy];
+    
 }
 
 - (void)test

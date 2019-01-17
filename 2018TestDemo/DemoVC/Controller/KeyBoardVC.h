@@ -10,5 +10,5 @@
 
 @interface KeyBoardVC : BaseViewController
 
-
+@property (copy, nonatomic) NSString *textStr;
 @end

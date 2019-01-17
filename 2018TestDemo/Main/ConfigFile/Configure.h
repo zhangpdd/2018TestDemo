@@ -50,10 +50,16 @@
 /** 比例（对照设计图) */
 #define ScaleWidth [[UIScreen mainScreen] bounds].size.width/750
 #define ScaleHeight [[UIScreen mainScreen] bounds].size.height/1334
+#define scaleValue(x) ScaleWidth * x
 
 /** 字体适配*/
 #define Scale ([[NSString stringWithFormat:@"%.1f",[UIScreen mainScreen].bounds.size.width / 375.0] doubleValue])
 #define ScaleSize  (Scale==1.0 ? 1.0 : Scale)
+
+/** 字体*/
+#define Font16          [UIFont systemFontOfSize:16.0]
+#define Font16_bold     [UIFont boldSystemFontOfSize:16.0]
+#define CustomFont_16   [UIFont fontWithName:@"Heiti SC" size:16.0]
 
 /** 状态栏的高度 */
 #define statusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
@@ -82,10 +88,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 /** 随机色颜色*/
 #define randomColor RGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1.0)
 
-/** 字体*/
-#define Font16          [UIFont systemFontOfSize:16.0]
-#define Font16_bold     [UIFont boldSystemFontOfSize:16.0]
-#define CustomFont_16   [UIFont fontWithName:@"Heiti SC" size:16.0]
 
 
 
