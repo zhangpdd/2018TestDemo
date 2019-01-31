@@ -43,22 +43,23 @@
 void UncaughtExceptionHandler(NSException *exception)
 {
     //获取异常崩溃信息
-    NSArray *callStack = [exception callStackSymbols];
-    NSString *reason = [exception reason];
-    NSString *name = [exception name];
+    NSArray *callStack = [exception callStackSymbols];//得到当前调用栈信息
+    NSString *reason = [exception reason];//非常重要，就是崩溃的原因
+    NSString *name = [exception name];//异常类型
     NSString *content = [NSString stringWithFormat:@"========异常错误报告========\nname:%@\nreason:\n%@\ncallStackSymbols:\n%@",name,reason,[callStack componentsJoinedByString:@"\n"]];
     
     //把异常崩溃信息发送至开发者邮件
-//    NSMutableString *mailUrl = [NSMutableString string];
-//    [mailUrl appendString:@"mailto:louischen@91jf.com"];
-//    [mailUrl appendString:@"?cc=iceyzhou@91jf.com"];
-//    [mailUrl appendString:@"&subject=程序异常崩溃，请配合发送异常报告，谢谢合作！"];
-//    [mailUrl appendFormat:@"&body=%@", content];
+    NSMutableString *mailUrl = [NSMutableString string];
+    [mailUrl appendString:@"mailto:15251329382@163.com"];
+    //[mailUrl appendString:@"?cc=iceyzhou@91jf.com"];
+    [mailUrl appendString:@"?subject=程序异常崩溃，请配合发送异常报告，谢谢合作！"];
+    [mailUrl appendFormat:@"&body=%@", content];
     // 打开地址
-//    NSString *mailPath = [mailUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailPath]];
+    NSString *mailPath = [mailUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailPath]];
 }
 
+#pragma mark 网络监听
 -(void)addNetWorkListener
 {
     [HttpRequestTool networkStatusWithBlock:^(ZPNetworkStatusType networkStatus) {
