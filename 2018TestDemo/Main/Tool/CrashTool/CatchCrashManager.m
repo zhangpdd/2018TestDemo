@@ -2,13 +2,11 @@
 //  CatchCrashManager.m
 //  ShinowDonor
 //
-//  Created by admin on 16/9/18.
-//  Copyright © 2016年 shinow. All rights reserved.
+//  Created by zp on 18/9/18.
+//  Copyright © 2018年 shinow. All rights reserved.
 //
 
 #import "CatchCrashManager.h"
-//#import "LoginModel.h"
-//#import "LoginModelUtil.h"
 #import <sys/utsname.h>
 #import <sys/socket.h>
 #import <sys/sockio.h>
@@ -23,7 +21,14 @@
 
 @implementation CatchCrashManager
 
-void uncaughtExceptionHandler(NSException *exception)
++ (void)addExceptionHandler
+{
+    //捕获异常崩溃信息
+    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+}
+
+#pragma mark 异常捕获相关
+void UncaughtExceptionHandler(NSException *exception)
 {
     /** 时间 */
     NSString *crashTime = [CatchCrashManager getCurrentTimeString];
@@ -70,6 +75,22 @@ void uncaughtExceptionHandler(NSException *exception)
     {
         [[NSString stringWithFormat:@"%@\n%@\n----------------------", crashInfoString, crashInfo] writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
+    
+    //获取异常崩溃信息
+//    NSArray *callStack = [exception callStackSymbols];//得到当前调用栈信息
+//    NSString *reason = [exception reason];//非常重要，就是崩溃的原因
+//    NSString *name = [exception name];//异常类型
+//    NSString *content = [NSString stringWithFormat:@"========异常错误报告========\nname:%@\nreason:\n%@\ncallStackSymbols:\n%@",name,reason,[callStack componentsJoinedByString:@"\n"]];
+//    
+//    //把异常崩溃信息发送至开发者邮件
+//    NSMutableString *mailUrl = [NSMutableString string];
+//    [mailUrl appendString:@"mailto:15251329382@163.com"];
+//    //[mailUrl appendString:@"?cc=iceyzhou@91jf.com"];
+//    [mailUrl appendString:@"?subject=程序异常崩溃，请配合发送异常报告，谢谢合作！"];
+//    [mailUrl appendFormat:@"&body=%@", content];
+//    // 打开地址
+//    NSString *mailPath = [mailUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailPath]];
 }
 
 + (NSString *)iphoneType
