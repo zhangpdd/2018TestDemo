@@ -390,7 +390,10 @@
         FullScreenVC *vc=[[FullScreenVC alloc] init];
         vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
         //[self.navigationController pushViewController:vc animated:YES];
-        [self presentViewController:vc animated:NO completion:nil];
+        
+        //vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        //vc.modalPresentationStyle= UIModalPresentationFullScreen;
+        [self presentViewController:vc animated:YES completion:nil];
         
     }else 
     {
