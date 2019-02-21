@@ -76,6 +76,7 @@ void UncaughtExceptionHandler(NSException *exception)
         [[NSString stringWithFormat:@"%@\n%@\n----------------------", crashInfoString, crashInfo] writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
     
+    
     //获取异常崩溃信息
 //    NSArray *callStack = [exception callStackSymbols];//得到当前调用栈信息
 //    NSString *reason = [exception reason];//非常重要，就是崩溃的原因

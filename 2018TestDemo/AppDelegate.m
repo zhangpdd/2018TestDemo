@@ -31,8 +31,8 @@
     //捕获异常崩溃信息
     [CatchCrashManager addExceptionHandler];
     
-    NSArray *arr = @[@(0), @(1)];
-    NSLog(@"%@", arr[2]); //模拟越界异常
+//    NSArray *arr = @[@(0), @(1)];
+//    NSLog(@"%@", arr[2]); //模拟越界异常
     
     [self.window makeKeyAndVisible];
     
