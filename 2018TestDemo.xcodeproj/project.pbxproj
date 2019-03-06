@@ -98,6 +98,7 @@
 		F8624A9120CA1A27007BF424 /* nineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8624A9020CA1A27007BF424 /* nineView.m */; };
 		F8624A9420CA2CEC007BF424 /* testHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8624A9320CA2CEC007BF424 /* testHeadView.m */; };
 		F864D96220F8A11C008B68EE /* KeyBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F864D96120F8A11C008B68EE /* KeyBoardVC.m */; };
+		F868BF91222F66BF00D50D14 /* TESTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F868BF90222F66BF00D50D14 /* TESTModel.m */; };
 		F869B53820F5F214003CEF7C /* HttpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F869B53720F5F214003CEF7C /* HttpRequestManager.m */; };
 		F86E160220E6074B0041D1C2 /* dyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F86E160120E6074B0041D1C2 /* dyTableViewCell.m */; };
 		F86F111F20EB0B9300E43AF3 /* RefreshVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F86F111E20EB0B9300E43AF3 /* RefreshVC.m */; };
@@ -355,6 +356,8 @@
 		F8624A9320CA2CEC007BF424 /* testHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testHeadView.m; sourceTree = "<group>"; };
 		F864D96020F8A11C008B68EE /* KeyBoardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyBoardVC.h; sourceTree = "<group>"; };
 		F864D96120F8A11C008B68EE /* KeyBoardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyBoardVC.m; sourceTree = "<group>"; };
+		F868BF8F222F66BF00D50D14 /* TESTModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TESTModel.h; sourceTree = "<group>"; };
+		F868BF90222F66BF00D50D14 /* TESTModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TESTModel.m; sourceTree = "<group>"; };
 		F869B53620F5F214003CEF7C /* HttpRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestManager.h; sourceTree = "<group>"; };
 		F869B53720F5F214003CEF7C /* HttpRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpRequestManager.m; sourceTree = "<group>"; };
 		F86E160020E6074B0041D1C2 /* dyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dyTableViewCell.h; sourceTree = "<group>"; };
@@ -906,6 +909,8 @@
 				F858F42720BE4F3D007395FB /* BaseView.m */,
 				F850307520AD34A700A0F335 /* PushItemModel.h */,
 				F850307620AD34A700A0F335 /* PushItemModel.m */,
+				F868BF8F222F66BF00D50D14 /* TESTModel.h */,
+				F868BF90222F66BF00D50D14 /* TESTModel.m */,
 				F8BF4C5920903E80003323F7 /* Configure.h */,
 				F84C831720915FB50047E6B6 /* UrlConfig.h */,
 			);
@@ -1678,6 +1683,7 @@
 				F894850521E6D5ED0037A365 /* WHGradientHelper.m in Sources */,
 				F8BF4C5520903D06003323F7 /* ZPNavgationVC.m in Sources */,
 				F8BF4CC920904569003323F7 /* UISearchBar+FMAdd.m in Sources */,
+				F868BF91222F66BF00D50D14 /* TESTModel.m in Sources */,
 				F8BF4CC620904569003323F7 /* UIImage+Gif.m in Sources */,
 				F84D38A8209ACFD400BC62B8 /* ZPAccountTool.m in Sources */,
 				F8F1CC7220B25B9E004A4E0F /* DynamicVC.m in Sources */,
