@@ -24,6 +24,7 @@ int main(int argc, char * argv[]) {
         NSLog(@"系统分配的内存大小%lu",malloc_size((__bridge const void *)test));
         
         //类的本质是结构体，里面的组成就是一个isa指针+成员变量 ，指针的大小8个字节，然后加成员变量大小，然后再进行内存对齐
+        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

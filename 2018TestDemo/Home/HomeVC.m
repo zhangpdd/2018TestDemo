@@ -141,6 +141,7 @@
     [self loadUIWithData];
     
     
+    
     UIImageView *headview=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, FrameW, 200)];
     headview.image =[UIImage imageNamed:@"bg.jpg"];
     self.demoList.tableHeaderView=headview;
