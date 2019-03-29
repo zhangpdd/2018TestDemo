@@ -113,7 +113,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    
     [self.navigationController.navigationBar setNavBarBgColor:[UIColor greenColor]];
     [self.navigationController.navigationBar setNavBarAlpha:0.0];
 }
