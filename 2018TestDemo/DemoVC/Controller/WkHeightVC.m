@@ -92,6 +92,10 @@
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
+    
+    
+    //NSString *promptCode = [NSStringstringWithFormat:@"mymethd(\"%@\")",self.data];
+    //当wkwebview把html加载完之后，调用此方法，其中@"mymethd(\"%@\")"，是方法名和要传的参数
 }
 
 #pragma mark - WKWKNavigationDelegate Methods
@@ -109,6 +113,12 @@
     //防止progressView被网页挡住
     [self.view bringSubviewToFront:self.progressView];
 }
+
+
+
+
+
+
 
 - (void)dealloc
 {

@@ -8,6 +8,7 @@
 
 #import "MessageVC.h"
 #import <sys/utsname.h>
+#import "UIImage+Gif.h"
 @interface MessageVC ()<UIGestureRecognizerDelegate>
 
 @end
@@ -21,9 +22,39 @@
     
     [self getDeviceName];
     
+    UIButton * btn1 = [[UIButton alloc]initWithFrame:CGRectMake(50, 100, 100, 100)];
+    btn1.backgroundColor = [UIColor redColor];
+    [btn1 addTarget:self action:@selector(clickBtn1) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn1];
+    
+    UIButton * btn2 = [[UIButton alloc]initWithFrame:CGRectMake(50, 50, 50, 50)];
+    btn2.backgroundColor = [UIColor cyanColor];
+    [btn2 addTarget:self action:@selector(clickBtn2) forControlEvents:UIControlEventTouchUpInside];
+    [btn1 addSubview:btn2];
+    
+    
+//    UIImageView *imagevie=[[UIImageView alloc] initWithFrame:CGRectMake(50, 200, 100, 100)];
+//    
+//    imagevie.image = [UIImage sd_animatedGIFNamed:@"动图"];
+//    [self.view addSubview:imagevie];
+    
     UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
     tapGr.delegate = self;
     [self.view addGestureRecognizer:tapGr];
+}
+
+- (void)clickBtn1
+{
+    NSLog(@"点击1");
+}
+- (void)clickBtn2
+{
+    NSLog(@"点击2");
+}
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    return nil;
 }
 
 - (void)tap

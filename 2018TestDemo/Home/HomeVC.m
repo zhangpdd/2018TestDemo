@@ -17,6 +17,8 @@
 #import "DynamicVC.h"
 #import "UserInfoVC.h"
 #import "OC-JSVC.h"
+#import "OC_wkVC.h"
+
 #import "FriendListVC.h"
 #import "FullScreenVC.h"
 #import "RefreshVC.h"
@@ -26,6 +28,7 @@
 #import "FMDBDemoVC.h"
 #import "WkHeightVC.h"
 #import "RootVC.h"
+#import "testCollectViewVC.h"
 
 
 #import "FullScreenVC.h"
@@ -271,7 +274,7 @@
 
 -(void)loadUIWithData
 {
-    self.demoArr = [NSMutableArray arrayWithObjects:@"背景动画", @"弹出框动画", @"table异常状态", @"搜索框动画", @"商品详情", @"朋友圈",@"个人信息的存储和删除",@"OC-js交互",@"好友列表", @"下拉刷新在中间",@"键盘高度",@"筛选",@"列表联动",@"数据库",@"网页高度",@"抽屉效果",@"全屏", nil];
+    self.demoArr = [NSMutableArray arrayWithObjects:@"背景动画", @"弹出框动画", @"table异常状态", @"搜索框动画", @"商品详情", @"朋友圈",@"个人信息的存储和删除",@"OC-js交互",@"好友列表", @"下拉刷新在中间",@"键盘高度",@"筛选",@"列表联动",@"数据库",@"网页高度",@"抽屉效果",@"瀑布流layout",@"全屏", nil];
     
     PushItemModel *model=[[PushItemModel alloc] init];
     model.destVc = [BackAnimateVC class];
@@ -296,7 +299,7 @@
     model6.destVc = [UserInfoVC class];
     
     PushItemModel *model7=[[PushItemModel alloc] init];
-    model7.destVc = [OC_JSVC class];
+    model7.destVc = [OC_wkVC class];
     
     PushItemModel *model8=[[PushItemModel alloc] init];
     model8.destVc = [FriendListVC class];
@@ -322,10 +325,13 @@
     PushItemModel *model15=[[PushItemModel alloc] init];
     model15.destVc = [RootVC class];
     
-    [self.sections addObjectsFromArray:[NSArray arrayWithObjects:model,model1,model2, model3,model4,model5,model6,model7,model8,model9,model10,model11,model12,model13,model14,model15,nil]];
+    PushItemModel *model16=[[PushItemModel alloc] init];
+    model16.destVc = [testCollectViewVC class];
+    
+    [self.sections addObjectsFromArray:[NSArray arrayWithObjects:model,model1,model2, model3,model4,model5,model6,model7,model8,model9,model10,model11,model12,model13,model14,model15,model16,nil]];
     
     
-    [self.VCArr addObjectsFromArray:[NSArray arrayWithObjects:@[[BackAnimateVC class],[AlertAnimateVC class],[ListTypeVC class],[SeerchNavVC class],[ShopDetailsVC class],[DynamicVC class],[UserInfoVC class],[OC_JSVC class],[FriendListVC class],[RefreshVC class],[KeyBoardVC class],[ChooseVC class],[DoubleTableVC class],[FMDBDemoVC class],[WkHeightVC class],[RootVC class],[FullScreenVC class]], nil]];
+    [self.VCArr addObjectsFromArray:[NSArray arrayWithObjects:@[[BackAnimateVC class],[AlertAnimateVC class],[ListTypeVC class],[SeerchNavVC class],[ShopDetailsVC class],[DynamicVC class],[UserInfoVC class],[OC_wkVC class],[FriendListVC class],[RefreshVC class],[KeyBoardVC class],[ChooseVC class],[DoubleTableVC class],[FMDBDemoVC class],[WkHeightVC class],[RootVC class],[testCollectViewVC class],[FullScreenVC class]], nil]];
     
     [self.demoList reloadData];
     

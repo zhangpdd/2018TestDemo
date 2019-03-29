@@ -36,6 +36,9 @@
     
     [self.window makeKeyAndVisible];
     
+    extern CFAbsoluteTime StartTime;
+    //启动时间
+    double launchTime = (CFAbsoluteTimeGetCurrent() - StartTime);
     
     return YES;
 }

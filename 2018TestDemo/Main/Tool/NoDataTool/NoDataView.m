@@ -146,11 +146,6 @@
 - (void)reloadClick:(UIButton *)btn
 {
     !self.reloadBlock ? : self.reloadBlock(btn);
-    
-//    if (self.reloadBlock)
-//    {
-//        self.reloadBlock(btn);
-//    }
 }
 
 @end
