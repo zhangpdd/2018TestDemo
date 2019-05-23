@@ -20,6 +20,8 @@
     
     self.view.backgroundColor=UIColorFromRGB(0x1f93ff);
     
+    NSLog(@"%@,%@",[self class],[super class]);
+    
     [self getDeviceName];
     
     UIButton * btn1 = [[UIButton alloc]initWithFrame:CGRectMake(50, 100, 100, 100)];

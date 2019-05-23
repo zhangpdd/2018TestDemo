@@ -29,7 +29,7 @@
         self.titleLabel = [[UILabel alloc] init];
         self.titleLabel.textAlignment = NSTextAlignmentLeft;
         self.titleLabel.textColor = [UIColor blackColor];
-        self.titleLabel.font = Font16;
+        self.titleLabel.font = Font(16);
         [self.contentView addSubview:self.titleLabel];
         
         self.selectImage = [[UIImageView alloc] init];

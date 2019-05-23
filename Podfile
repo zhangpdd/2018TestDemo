@@ -3,7 +3,7 @@ platform :ios, '9.0'
 target '2018TestDemo' do
 
 
-pod 'MJRefresh’
+pod 'MJRefresh'
 pod 'Masonry'
 pod 'MJExtension'
 pod 'SDWebImage'
@@ -15,7 +15,7 @@ pod 'PYSearch'
 
 pod 'FMDB’
 
-pod 'TZImagePickerController’
+pod 'TZImagePickerController'
 
 
 end

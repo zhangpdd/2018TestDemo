@@ -43,6 +43,7 @@
 #import "HttpRequestManager.h"
 #import <WebKit/WebKit.h>
 #import "UIButton+HQCustomIcon.h"
+#import "UIButton+Category.h"
 
 @interface HomeVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -130,6 +131,15 @@
     
     self.view.backgroundColor = randomColor;
     
+//    UIViewController *presentingVc = self.presentingViewController;
+//    while (presentingVc.presentingViewController) { // 找到最底层那个present的控制器
+//        presentingVc = presentingVc.presentingViewController;
+//    }
+//    if(presentingVc){
+//        // 回到最初present的那个控制器
+//        [presentingVc dismissViewControllerAnimated:YES completion:nil];
+//    }
+    
     [self test];
     
     //[AlertTool ShowAlertTitle:@"提示" msg:@"是否确定操作？" InVC:self];
@@ -175,13 +185,13 @@
     [self closeVC];
     
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.button.frame = CGRectMake(100, 100, 90, 30);
-    self.button.backgroundColor = [UIColor blueColor];
+    self.button.frame = CGRectMake(100, 100, 90, 30);//
+    self.button.backgroundColor = UIColorHex(ffffff);//[UIColor blueColor];
     [self.button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     self.button.titleLabel.font = [UIFont systemFontOfSize:14];
     [self.button setTitle:@"获取验证码" forState:UIControlStateNormal];
     [self.view addSubview:self.button];
-    
+    [self.button setEnlargeEdgeWithTop:20 right:20 bottom:20 left:20];
     
     //    UIButton *_centerBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 300, 80, 50)];
     //    _centerBtn.backgroundColor = [UIColor yellowColor];
@@ -261,7 +271,7 @@
 
 - (void)rightAction
 {
-    //NSLog(@"uuid---%@",[NSString uuid]);
+    NSLog(@"点击");
     [demoRequest getStatusListPageNum:@"1" PageSize:@"10" SucceededBlock:^(id responseObject) {
         
         NSLog(@"success");

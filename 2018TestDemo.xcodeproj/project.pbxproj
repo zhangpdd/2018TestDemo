@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		688A6D6F26A06368800C0FD9 /* libPods-2018TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B57C6D79BE8F87D052629D9B /* libPods-2018TestDemo.a */; };
+		6E043DCD225E0A10003EFD2B /* CarouselImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E043DCC225E0A10003EFD2B /* CarouselImageView.m */; };
+		6E043DD0225E0BDE003EFD2B /* CarouselImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E043DCF225E0BDE003EFD2B /* CarouselImageCell.m */; };
 		F838D4F520FDC6BE002D14E5 /* UINavigationBar+CustomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F838D4F420FDC6BE002D14E5 /* UINavigationBar+CustomBar.m */; };
 		F841081120C67C1100A3C1E7 /* AlertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F841081020C67C1100A3C1E7 /* AlertTool.m */; };
 		F847B1C420AEA3F700E6A589 /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F847B1C320AEA3F700E6A589 /* UserInfoVC.m */; };
@@ -211,6 +213,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E043DCB225E0A10003EFD2B /* CarouselImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselImageView.h; sourceTree = "<group>"; };
+		6E043DCC225E0A10003EFD2B /* CarouselImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselImageView.m; sourceTree = "<group>"; };
+		6E043DCE225E0BDE003EFD2B /* CarouselImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselImageCell.h; sourceTree = "<group>"; };
+		6E043DCF225E0BDE003EFD2B /* CarouselImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselImageCell.m; sourceTree = "<group>"; };
 		B57C6D79BE8F87D052629D9B /* libPods-2018TestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-2018TestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF738CB34D6D251FA5C4AD /* Pods-2018TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2018TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EE57EC223BA2EFD4F3A3512C /* Pods-2018TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2018TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -564,6 +570,17 @@
 				EDFF738CB34D6D251FA5C4AD /* Pods-2018TestDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E043DD1225E0C06003EFD2B /* CarouselImageTool */ = {
+			isa = PBXGroup;
+			children = (
+				6E043DCB225E0A10003EFD2B /* CarouselImageView.h */,
+				6E043DCC225E0A10003EFD2B /* CarouselImageView.m */,
+				6E043DCE225E0BDE003EFD2B /* CarouselImageCell.h */,
+				6E043DCF225E0BDE003EFD2B /* CarouselImageCell.m */,
+			);
+			path = CarouselImageTool;
 			sourceTree = "<group>";
 		};
 		711A7447CBC9C266DB64CE2A /* Frameworks */ = {
@@ -1408,6 +1425,7 @@
 			children = (
 				F894850621E6D5F50037A365 /* WHGradientHelper.h */,
 				F894850421E6D5ED0037A365 /* WHGradientHelper.m */,
+				6E043DD1225E0C06003EFD2B /* CarouselImageTool */,
 				F85B799320F44109008564C6 /* AuthorityTool */,
 				F8510F1620E9B24C00E0522D /* NavigationTool */,
 				F841080E20C67BF400A3C1E7 /* AlertTool */,
@@ -1706,6 +1724,7 @@
 				F8BF4CC620904569003323F7 /* UIImage+Gif.m in Sources */,
 				F84D38A8209ACFD400BC62B8 /* ZPAccountTool.m in Sources */,
 				F8F1CC7220B25B9E004A4E0F /* DynamicVC.m in Sources */,
+				6E043DD0225E0BDE003EFD2B /* CarouselImageCell.m in Sources */,
 				F882588F20BF9AA000056710 /* ContactViewModel.m in Sources */,
 				F8BF4CDC20904A7B003323F7 /* introductoryPagesView.m in Sources */,
 				F8BF4CB620904569003323F7 /* NSData+CommonCryptor.m in Sources */,
@@ -1757,6 +1776,7 @@
 				F8BF4CB920904569003323F7 /* NSMutableAttributedString+Category.m in Sources */,
 				F893FCFA223A49B7000EA240 /* OC_wkVC.m in Sources */,
 				F85AE5D920D1F48C00DE35AF /* FriendListModel.m in Sources */,
+				6E043DCD225E0A10003EFD2B /* CarouselImageView.m in Sources */,
 				F8BC78842094600500ADD437 /* NoDataView.m in Sources */,
 				F86D4FCD223799EE00767E2C /* TestLayout.m in Sources */,
 				F8BF4C22209028D7003323F7 /* AppDelegate.m in Sources */,

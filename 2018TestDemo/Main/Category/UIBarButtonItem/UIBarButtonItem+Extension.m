@@ -97,9 +97,9 @@
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -15);
     btn.frame = CGRectMake(0, 0, title.length * 18, 30);
+    [btn setEnlargeEdgeWithTop:0 right:20 bottom:0 left:0];
     return  [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
-
 
 
 @end

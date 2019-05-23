@@ -57,9 +57,9 @@
 #define ScaleSize  (Scale==1.0 ? 1.0 : Scale)
 
 /** 字体*/
-#define Font16          [UIFont systemFontOfSize:16.0]
-#define Font16_bold     [UIFont boldSystemFontOfSize:16.0]
-#define CustomFont_16   [UIFont fontWithName:@"Heiti SC" size:16.0]
+#define Font(x)          [UIFont systemFontOfSize:x]
+#define Font_bold(x)     [UIFont boldSystemFontOfSize:x]
+#define CustomFont_(x)   [UIFont fontWithName:@"Heiti SC" size:x]
 
 /** 状态栏的高度 */
 #define statusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
@@ -77,6 +77,8 @@
 #define TabbarHeight   (statusBarHeight>20?83:49)
 
 /** 颜色转换 */
+#define UIColorHex(colorValue)   [UIColor colorWithHexString:((__bridge NSString *)CFSTR(#colorValue))]
+
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \

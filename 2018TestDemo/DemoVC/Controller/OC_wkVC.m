@@ -74,7 +74,7 @@
 
 - (void)navButtonAction{
     // iOS调用js里的navButtonAction方法并传入两个参数
-    
+
     NSString *promptCode = [NSString stringWithFormat:@"navButtonAction('%@',%d)",@"123456",255];
     
     //@"navButtonAction('Jonas',25)"

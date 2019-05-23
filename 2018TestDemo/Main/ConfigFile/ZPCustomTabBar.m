@@ -63,7 +63,13 @@
     }
     
     CGFloat barWidth = self.bounds.size.width;//tabbar宽度
-    CGFloat barHeight = self.bounds.size.height;//tabbar高度
+    CGFloat safeBottomHeight = 0;
+    if (@available(iOS 11.0, *)) {
+        safeBottomHeight = SafeBottomHeight;
+    } else {
+        safeBottomHeight = 0;
+    }
+    CGFloat barHeight = self.bounds.size.height-safeBottomHeight;//tabbar高度
     CGFloat centerBtnWidth = CGRectGetWidth(self.centerBtn.frame);//中间按钮宽度
     CGFloat centerBtnHeight = CGRectGetHeight(self.centerBtn.frame);//中间按钮高度
     // 设置中间按钮的位置，居中，凸起一丢丢

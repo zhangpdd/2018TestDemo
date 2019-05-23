@@ -50,7 +50,7 @@
         
     }];
     
-    [self GCDTest];
+    //[self GCDTest];
     [self gvf];
 }
 
@@ -86,32 +86,38 @@
 - (void)gvf
 {
     dispatch_group_t group = dispatch_group_create();
-    dispatch_group_enter(group);
+    //dispatch_group_enter(group);
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //请求1
+        NSLog(@"请求1");
+        [self req:@"这是请求1"];
 //        [网络请求:{
 //            成功：dispatch_group_leave(group);
 //            失败：dispatch_group_leave(group);
 //        }];
-        dispatch_group_leave(group);
+        //dispatch_group_leave(group);
     });
-    dispatch_group_enter(group);
+    //dispatch_group_enter(group);
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //请求2
+        NSLog(@"请求2");
+        [self req:@"这是请求2"];
 //        [网络请求:{
 //            成功：dispatch_group_leave;
 //            失败：dispatch_group_leave;
 //        }];
-        dispatch_group_leave(group);
+        //dispatch_group_leave(group);
     });
-    dispatch_group_enter(group);
+    //dispatch_group_enter(group);
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //请求3
+        NSLog(@"请求3");
+        [self req:@"这是请求3"];
 //        [网络请求:{
 //            成功：dispatch_group_leave(group);
 //            失败：dispatch_group_leave(group);
 //        }];
-        dispatch_group_leave(group);
+        //dispatch_group_leave(group);
     });
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         //界面刷新
@@ -120,7 +126,24 @@
     
     
     
+    
 }
+
+- (void)req: (NSString *)str
+{
+    NSMutableDictionary *dic =[NSMutableDictionary dictionary];
+    [dic setValue:@"" forKey:@"hdbh"];
+    [HttpRequestTool POST:@"http://pt.qiandeng.gov.cn/river/webService/WebService_river.asmx/hdxys" parameters:dic progress:^(NSProgress *progress) {
+        
+        
+        
+    } success:^(id responseObject) {
+        NSLog(@"%@",str);
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 - (void)ToDismiss
 {
     [self dismissViewControllerAnimated:YES completion:nil];

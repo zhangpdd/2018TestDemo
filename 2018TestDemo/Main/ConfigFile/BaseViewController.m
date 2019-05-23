@@ -27,16 +27,13 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     //self.edgesForExtendedLayout=UIRectEdgeNone;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (@available(iOS 11.0, *)){
             [[UIScrollView appearanceWhenContainedInInstancesOfClasses:@[[BaseViewController class]]] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
-        }else
-        {
-            self.automaticallyAdjustsScrollViewInsets = NO;
         }
     });
 
