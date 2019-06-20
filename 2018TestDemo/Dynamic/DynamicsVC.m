@@ -21,39 +21,45 @@
     
     [self loadCarousImage];
     
+
+//    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ygjkclass.com/pdres/ext_images/banner3.png"]];
+//
+//    UIImage *image = [UIImage imageWithData:imageData];
+//
+//    NSLog(@"w = %f,h = %f",image.size.width,image.size.height);
+   
     
-    [HttpRequestTool GET:@"http://120.77.61.63:9198/api/DocManager/DownloadDesignDocVersionOfFolder?folderId=106" parameters:nil progress:^(NSProgress *progress) {
-        
-    } success:^(id responseObject) {
-        
-    } failure:^(NSError *error) {
-        
-    }];
+//    [HttpRequestTool GET:@"http://120.77.61.63:9198/api/DocManager/DownloadDesignDocVersionOfFolder?folderId=106" parameters:nil progress:^(NSProgress *progress) {
+//        
+//    } success:^(id responseObject) {
+//        
+//    } failure:^(NSError *error) {
+//        
+//    }];
     
     
     
     //http://pt.qiandeng.gov.cn/river/webService/WebService_river.asmx/hdxys
     //[dic setValue:@"" forKey:@"hdbh"];
     
-    NSMutableDictionary *dic =[NSMutableDictionary dictionary];
-    [dic setValue:@"" forKey:@"hdbh"];
-    [HttpRequestTool POST:@"http://pt.qiandeng.gov.cn/river/webService/WebService_river.asmx/hdxys" parameters:dic progress:^(NSProgress *progress) {
-        
-    } success:^(id responseObject) {
-        
-    } failure:^(NSError *error) {
-        
-    }];
+//    NSMutableDictionary *dic =[NSMutableDictionary dictionary];
+//    [dic setValue:@"" forKey:@"hdbh"];
+//    [HttpRequestTool POST:@"http://pt.qiandeng.gov.cn/river/webService/WebService_river.asmx/hdxys" parameters:dic progress:^(NSProgress *progress) {
+//
+//    } success:^(id responseObject) {
+//
+//    } failure:^(NSError *error) {
+//
+//    }];
     
-    [HttpRequestTool POST:@"http://pt.qiandeng.gov.cn/webService/hqappService.asmx/checkNewVer_ios" parameters:nil progress:^(NSProgress *progress) {
-        
-    } success:^(id responseObject) {
-        
-    } failure:^(NSError *error) {
-        
-    }];
+//    [HttpRequestTool POST:@"http://pt.qiandeng.gov.cn/webService/hqappService.asmx/checkNewVer_ios" parameters:nil progress:^(NSProgress *progress) {
+//
+//    } success:^(id responseObject) {
+//
+//    } failure:^(NSError *error) {
+//
+//    }];
     
-    // Do any additional setup after loading the view.
 }
 
 - (void)loadCarousImage
@@ -67,6 +73,14 @@
                            @"http://ygjkclass.com/pdres/ext_images/shimian-1.jpg", nil];
     
     [self.view addSubview:carousView];
+    
+    
+    UIImage *cachedImage = [[SDImageCache sharedImageCache] imageFromCacheForKey:carousView.imageArr[1]];
+    
+    CGFloat width = cachedImage.size.width;
+    CGFloat height = cachedImage.size.height;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,14 +88,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

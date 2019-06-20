@@ -8,11 +8,16 @@
 
 #import "ProfileVC.h"
 #import "UITabBar+RedDot.h"
-@interface ProfileVC ()<UITableViewDelegate, UITableViewDataSource>
+#import "HttpRequestTool.h"
+#import "iCloudManager.h"
+#import <WebKit/WebKit.h>
+@interface ProfileVC ()<UITableViewDelegate, UITableViewDataSource,UIDocumentPickerDelegate>
 
 @property (strong , nonatomic) UITableView *profileList;
 
 @property (strong , nonatomic) NSArray *profileArr;
+
+@property(nonatomic,strong) UIWebView* webView;
 
 @end
 NSString *str=@"123";
@@ -65,7 +70,7 @@ NSString *str=@"123";
     [self.profileList reloadData];
     
     
-    static NSString *str=@"123";
+    //static NSString *str=@"123";
     
     __block int a = 10;
     NSLog(@"1---%p",&a);
@@ -77,6 +82,15 @@ NSString *str=@"123";
     }];
     NSLog(@"3--->%p",&a);
     NSLog(@"3--->%d",a);
+    
+    
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 500, 300, 100)];
+    self.webView.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:self.webView];
+    
+    
+    
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -111,20 +125,86 @@ NSString *str=@"123";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // ios8+才支持icloud drive功能
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >=11.0){
+        //iOS 8 specific code here
+        NSArray *documentTypes = @[@"public.content", @"public.text", @"public.source-code ", @"public.image", @"public.audiovisual-content", @"com.adobe.pdf", @"com.apple.keynote.key", @"com.microsoft.word.doc", @"com.microsoft.excel.xls", @"com.microsoft.powerpoint.ppt"];
+        
+        UIDocumentPickerViewController *documentPicker = [[UIDocumentPickerViewController alloc] initWithDocumentTypes:documentTypes inMode:UIDocumentPickerModeOpen];
+        documentPicker.delegate = self;
+        documentPicker.modalPresentationStyle = UIModalPresentationFormSheet;
+        [self presentViewController:documentPicker animated:YES completion:nil];
+    }
+    
+}
+
+
+// 选中icloud里的pdf文件
+- (void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentAtURL:(NSURL *)url {
+    
+    NSArray *array = [[url absoluteString] componentsSeparatedByString:@"/"];
+    NSString *fileName = [array lastObject];
+    fileName = [fileName stringByRemovingPercentEncoding];
+    
+    BOOL fileUrlAuthozied = [url startAccessingSecurityScopedResource];
+    if(fileUrlAuthozied){
+        NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
+        NSError *error;
+        
+        [fileCoordinator coordinateReadingItemAtURL:url options:0 error:&error byAccessor:^(NSURL *newURL) {
+            
+            if ([iCloudManager iCloudEnable]) {
+                [iCloudManager downloadWithDocumentURL:url callBack:^(id obj) {
+                    NSData *data = obj;
+                    
+                    //写入沙盒Documents
+                    NSString *filePath = [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/Documents/%@",fileName]];
+                    [data writeToFile:filePath atomically:YES];
+                    
+                    
+                    NSString *doucumentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+                    //2.拼接上文件路径
+                    NSString *filtPath = [doucumentsPath stringByAppendingPathComponent:fileName];
+                    
+                    NSData *showData = [NSData dataWithContentsOfFile:filtPath];
+                    
+                }];
+            }
+            
+            [self dismissViewControllerAnimated:YES completion:NULL];
+            
+            
+            
+        }];
+        [url stopAccessingSecurityScopedResource];
+    }else{
+        //Error handling
+        
+    }
+}
+
+
+
+//http://ruiyi2.frpgz1.idcfengye.com/app/adam/api/v1/upload
+
+- (void)uploadURL: (NSString *)url WithName:(NSString *)name
+{
+    [HttpRequestTool uploadFileWithURL:@"http://ruiyi2.frpgz1.idcfengye.com/app/adam/api/v1/upload" parameters:nil name:@"fileUploads" filePath:url progress:^(NSProgress *progress) {
+        
+    } success:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

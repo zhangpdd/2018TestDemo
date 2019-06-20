@@ -5,7 +5,7 @@
 /****第三方******/
 #import <Masonry.h>
 #import <SVProgressHUD.h>
-#import <UIImageView+WebCache.h>
+#import <SDWebImage.h>
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
@@ -25,9 +25,9 @@
 
 #define FirstLaunch @"firstLaunch"
 
-#define networkFailed @"网络连接失败，请稍候再试"
+#define NetWorkFailed @"网络连接失败，请稍候再试"
 //主题
-#define ZTTThome @"ZTTThome"
+#define ZTThome @"ZTTThome"
 
 
 /** 屏幕的宽度*/

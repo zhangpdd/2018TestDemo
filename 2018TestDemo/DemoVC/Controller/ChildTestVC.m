@@ -40,4 +40,10 @@
     //[self.parentViewController.navigationController pushViewController:[[ChooseVC alloc] init] animated:YES];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"子试图消失");
+}
+
 @end

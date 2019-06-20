@@ -28,7 +28,7 @@
     if ([manager fileExistsAtPath:path1])
     {
         //SDWebImage框架自身计算缓存的实
-        folderSize += [[SDImageCache sharedImageCache] getSize]/1000.0/1000.0;
+        folderSize += [[SDImageCache sharedImageCache] totalDiskSize]/1000.0/1000.0;
     }
     return [NSString stringWithFormat:@"%.2fM",folderSize];
 }

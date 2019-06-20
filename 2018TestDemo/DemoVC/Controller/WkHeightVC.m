@@ -51,6 +51,26 @@
      */
     [self.wkWebView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     
+    UITextView *ruleTextView = [[UITextView alloc] init];
+    ruleTextView.backgroundColor = [UIColor whiteColor];
+    ruleTextView.editable = NO;//不可编辑
+    ruleTextView.textColor = [UIColor blackColor];
+    
+    if (@available(iOS 11.0, *)) {
+        ruleTextView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
+    ruleTextView.frame = CGRectMake(0, NavTopHeight, FrameW, FrameH-NavTopHeight);
+    [self.view addSubview:ruleTextView];
+    
+    NSString *str= @"👻还有防盗锁，用过的人都说好，这个出游季，带上一个不会错！&lt;br&gt;✈出游旺季带什么好？&lt;br&gt;装下你所需的20寸万向轮拉杆箱~&lt;br&gt;【七匹狼】品牌保证🎉&lt;br&gt;颜控必备的奢华铝合金拉丝面箱体&lt;br&gt;券后【99】✨&lt;br&gt;——————————&lt;br&gt;";
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    
+    ruleTextView.text = attributedString.string;
+    
 }
 
 #pragma mark - 监听    =====WKWebView代理相关关
@@ -123,6 +143,12 @@
 - (void)dealloc
 {
     [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"子试图消失");
 }
 
 - (void)didReceiveMemoryWarning {

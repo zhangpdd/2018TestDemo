@@ -13,11 +13,16 @@
 @end
 
 @implementation BaseViewController
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"父试图出现");
+}
 -(void)viewWillDisappear:(BOOL)animated{
     
     [super viewWillDisappear:YES];
     
+    NSLog(@"父试图消失");
 //    self.navigationController.navigationBar.barTintColor=UIColorFromRGB(0X5d75fa);
 //    self.navigationController.navigationBar.alpha=1.0;
 //    self.navigationController.navigationBarHidden=NO;

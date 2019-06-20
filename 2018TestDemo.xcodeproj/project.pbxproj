@@ -10,6 +10,8 @@
 		688A6D6F26A06368800C0FD9 /* libPods-2018TestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B57C6D79BE8F87D052629D9B /* libPods-2018TestDemo.a */; };
 		6E043DCD225E0A10003EFD2B /* CarouselImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E043DCC225E0A10003EFD2B /* CarouselImageView.m */; };
 		6E043DD0225E0BDE003EFD2B /* CarouselImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E043DCF225E0BDE003EFD2B /* CarouselImageCell.m */; };
+		6E13C04D229CD67800ED2F82 /* ZZDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E13C049229CD67800ED2F82 /* ZZDocument.m */; };
+		6E13C04E229CD67800ED2F82 /* iCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E13C04A229CD67800ED2F82 /* iCloudManager.m */; };
 		F838D4F520FDC6BE002D14E5 /* UINavigationBar+CustomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F838D4F420FDC6BE002D14E5 /* UINavigationBar+CustomBar.m */; };
 		F841081120C67C1100A3C1E7 /* AlertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F841081020C67C1100A3C1E7 /* AlertTool.m */; };
 		F847B1C420AEA3F700E6A589 /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F847B1C320AEA3F700E6A589 /* UserInfoVC.m */; };
@@ -217,6 +219,11 @@
 		6E043DCC225E0A10003EFD2B /* CarouselImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselImageView.m; sourceTree = "<group>"; };
 		6E043DCE225E0BDE003EFD2B /* CarouselImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselImageCell.h; sourceTree = "<group>"; };
 		6E043DCF225E0BDE003EFD2B /* CarouselImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselImageCell.m; sourceTree = "<group>"; };
+		6E13C048229CD67800ED2F82 /* iCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCloudManager.h; sourceTree = "<group>"; };
+		6E13C049229CD67800ED2F82 /* ZZDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZDocument.m; sourceTree = "<group>"; };
+		6E13C04A229CD67800ED2F82 /* iCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCloudManager.m; sourceTree = "<group>"; };
+		6E13C04B229CD67800ED2F82 /* ZZDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZDocument.h; sourceTree = "<group>"; };
+		6EC3D18A229B709200E57B6F /* 2018TestDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 2018TestDemo.entitlements; sourceTree = "<group>"; };
 		B57C6D79BE8F87D052629D9B /* libPods-2018TestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-2018TestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF738CB34D6D251FA5C4AD /* Pods-2018TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2018TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EE57EC223BA2EFD4F3A3512C /* Pods-2018TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2018TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -583,6 +590,17 @@
 			path = CarouselImageTool;
 			sourceTree = "<group>";
 		};
+		6E13C046229CD67800ED2F82 /* iCloudTool */ = {
+			isa = PBXGroup;
+			children = (
+				6E13C048229CD67800ED2F82 /* iCloudManager.h */,
+				6E13C04A229CD67800ED2F82 /* iCloudManager.m */,
+				6E13C04B229CD67800ED2F82 /* ZZDocument.h */,
+				6E13C049229CD67800ED2F82 /* ZZDocument.m */,
+			);
+			path = iCloudTool;
+			sourceTree = "<group>";
+		};
 		711A7447CBC9C266DB64CE2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -939,6 +957,7 @@
 		F877B603214A4E31004F1403 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				6E13C046229CD67800ED2F82 /* iCloudTool */,
 				F877B60D214A4F82004F1403 /* ProfileVC.h */,
 				F877B60E214A4F82004F1403 /* ProfileVC.m */,
 			);
@@ -1122,6 +1141,7 @@
 		F8BF4C1F209028D7003323F7 /* 2018TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6EC3D18A229B709200E57B6F /* 2018TestDemo.entitlements */,
 				F8624A8220CA1897007BF424 /* 朋友圈 */,
 				F856724620C51011005D9580 /* Manager */,
 				F850845C20B5332600867B4C /* ThirdPart */,
@@ -1524,6 +1544,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
 						};
 					};
 					F8BF4C34209028D7003323F7 = {
@@ -1645,23 +1668,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/PYSearch/PYSearch/PYSearch.bundle",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
-				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PYSearch.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-2018TestDemo/Pods-2018TestDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F4C50F35F9039087933BFEF /* [CP] Check Pods Manifest.lock */ = {
@@ -1744,6 +1760,7 @@
 				F8BF4CCA20904569003323F7 /* UITableViewCell+CellAnimation.m in Sources */,
 				F8BF4CD020904569003323F7 /* UIViewController+Example.m in Sources */,
 				F850307A20AD4AC600A0F335 /* AlertAnimateVC.m in Sources */,
+				6E13C04E229CD67800ED2F82 /* iCloudManager.m in Sources */,
 				F8BF4CC820904569003323F7 /* UIMenuItem+Category.m in Sources */,
 				F8BF4CDD20904A7B003323F7 /* ZTTCacheDealTool.m in Sources */,
 				F8BF4CB820904569003323F7 /* NSMutableArray+Category.m in Sources */,
@@ -1784,6 +1801,7 @@
 				F877B609214A4F50004F1403 /* MessageVC.m in Sources */,
 				F864D96220F8A11C008B68EE /* KeyBoardVC.m in Sources */,
 				F869B53820F5F214003CEF7C /* HttpRequestManager.m in Sources */,
+				6E13C04D229CD67800ED2F82 /* ZZDocument.m in Sources */,
 				F8B916B420A03A15007FCCF0 /* animateView.m in Sources */,
 				F850B49620C667AE00E50247 /* HttpRequestTool.m in Sources */,
 				F850856720B53F8300867B4C /* YYFPSLabel.m in Sources */,
@@ -1964,9 +1982,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = 2018TestDemo/2018TestDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H7GGP56GD;
+				DEVELOPMENT_TEAM = UXH5566UL5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/2018TestDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = 2018TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1974,7 +1993,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "zp.-018TestDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "-018TestDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1987,9 +2006,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = 2018TestDemo/2018TestDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H7GGP56GD;
+				DEVELOPMENT_TEAM = UXH5566UL5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/2018TestDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = 2018TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1997,7 +2017,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "zp.-018TestDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "-018TestDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;

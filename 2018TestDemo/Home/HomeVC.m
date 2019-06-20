@@ -113,6 +113,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"子试图出现");
     [super viewWillAppear:YES];
     [self.navigationController.navigationBar setNavBarBgColor:[UIColor greenColor]];
     [self.navigationController.navigationBar setNavBarAlpha:0.0];
